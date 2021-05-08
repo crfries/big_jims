@@ -94,7 +94,7 @@ const ContactInfo = styled.div`
   line-height: 2.5rem;
 
   a {
-    padding-left: 50px;
+    padding: 0 10px;
     color: #8a8987;
     text-decoration: none;
     transition: color linear 0.3s;

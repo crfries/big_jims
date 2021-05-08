@@ -131,14 +131,6 @@ const Info = styled.section`
     color: gray;
     text-transform: uppercase;
   }
-
-  h3 {
-    font-size: 1.2rem;
-    padding-bottom: 2rem;
-    transition: color linear 0.3s;
-    text-transform: uppercase;
-    transform: translateX(40px);
-  }
 `;
 
 const Service = styled.div`
@@ -199,7 +191,6 @@ const ServiceDetails = styled.div`
 
   p {
     font-size: 1em;
-    font-style: bold;
     font-weight: 400;
   }
 
