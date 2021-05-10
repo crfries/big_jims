@@ -97,10 +97,6 @@ const Links = styled.div`
       transform: scaleX(0);
       background-color: white;
       transition: transform 0.3s;
-
-      @media screen and (max-width: 500px) {
-        width: 50%;
-      }
     }
 
     &:hover {
