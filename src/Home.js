@@ -60,6 +60,7 @@ const Home = () => {
           <div className="text">
             <p>{text.text}</p>
           </div>
+          <img src={image.img1} alt="" />
         </ServiceDetails>
       </ServiceContainer>
       <Footer />
@@ -185,7 +186,7 @@ const ServiceDetails = styled.div`
   justify-content: space-between;
 
   img {
-    width: 400px;
+    width: 300px;
     height: auto;
   }
 
