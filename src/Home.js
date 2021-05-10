@@ -216,7 +216,6 @@ const ServiceDetails = styled.div`
     .text {
       width: 300px;
       text-align: center;
-      transform: translateX(50px);
     }
   }
 `;
