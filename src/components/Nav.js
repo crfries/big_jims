@@ -1,23 +1,23 @@
-import styled from "styled-components";
-import logo from "../media/logo.jpg";
-import { Link } from "react-router-dom";
+import styled from "styled-components"
+import logo from "../media/logo.jpg"
+import { Link } from "react-router-dom"
 
 const Nav = () => {
   return (
     <Navigation>
       <Links>
         <div className="link-wrapper">
-          <Link to="/home" className="link hover-2">
+          <Link to="/home" className="fancy-3">
             Home
           </Link>
         </div>
         <div className="link-wrapper">
-          <Link to="/gallery" className="link hover-2">
+          <Link to="/gallery" className="fancy-3">
             Gallery
           </Link>
         </div>
         <div className="link-wrapper">
-          <Link to="/contact" className="link hover-2">
+          <Link to="/contact" className="fancy-3">
             Contact
           </Link>
         </div>
@@ -26,10 +26,10 @@ const Nav = () => {
         <Logo src={logo} />
       </Link>
     </Navigation>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
 
 const Navigation = styled.nav`
   position: relative;
@@ -37,18 +37,18 @@ const Navigation = styled.nav`
   flex-direction: row;
   height: fit-content;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   z-index: 2;
 
   @media screen and (max-width: 1000px) {
     display: grid;
     place-content: center;
   }
-`;
+`
 const Logo = styled.img`
   position: relative;
-  left: 175px;
-  top: 50px;
+  left: 3rem;
+  top: 2rem;
   padding-bottom: 50px;
   @media screen and (max-width: 1400px) {
     left: 50px;
@@ -58,52 +58,25 @@ const Logo = styled.img`
     margin-bottom: 10rem;
     left: 0;
   }
-`;
+`
 
 const Links = styled.div`
-  height: fit-content;
+  height: auto;
   width: 70%;
   display: flex;
   justify-content: space-evenly;
-  align-self: center;
   position: absolute;
   right: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
   text-transform: uppercase;
 
   a {
-    color: #fff;
     text-decoration: none;
     font-size: 1.6rem;
-    transition: all linear 0.2s;
-    :hover {
-      color: royalblue;
-    }
   }
   .link-wrapper {
     position: relative;
     display: block;
-  }
-  .hover-2 {
-    padding-bottom: 10px;
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 3px;
-      transform: scaleX(0);
-      background-color: white;
-      transition: transform 0.3s;
-    }
-
-    &:hover {
-      &:after {
-        transform: scaleX(1);
-      }
-    }
   }
   @media screen and (max-width: 1000px) {
     flex-direction: row;
@@ -117,4 +90,4 @@ const Links = styled.div`
     padding-bottom: 5rem;
     text-align: center;
   }
-`;
+`

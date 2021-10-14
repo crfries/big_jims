@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import flag from "../media/flag.jpg";
+import styled from "styled-components"
+import flag from "../media/flag.jpg"
 
 const Footer = () => {
   return (
@@ -9,10 +9,10 @@ const Footer = () => {
         <h3>Family Owned & Operated</h3>
       </div>
     </FooterContainer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
 const FooterContainer = styled.div`
   position: absolute;
@@ -31,6 +31,7 @@ const FooterContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25px;
 
     h3 {
       padding-left: 2rem;
@@ -48,4 +49,4 @@ const FooterContainer = styled.div`
       }
     }
   }
-`;
+`

@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { PageTrans } from "./animations";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import data from "./serviceData";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import styled from "styled-components"
+import { PageTrans } from "./animations"
+import { motion } from "framer-motion"
+import { useState } from "react"
+import data from "./serviceData"
+import Nav from "./components/Nav"
+import Footer from "./components/Footer"
 
 const Home = () => {
-  const services = data();
-  const [text, setText] = useState(services[0]);
-  const [image, setImage] = useState(services[0]);
+  const services = data()
+  const [ text, setText ] = useState(services[ 0 ])
+  const [ image, setImage ] = useState(services[ 0 ])
 
   return (
     <HomeContainer>
@@ -26,53 +26,60 @@ const Home = () => {
             <h2>Custom Exhaust</h2>
           </div>
           <Service>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setText(services[0]);
-                setImage(services[0]);
-              }}
-            >
-              <h5>Custom</h5>
-            </button>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setText(services[1]);
-                setImage(services[1]);
-              }}
-            >
-              <h5>Performance</h5>
-            </button>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setText(services[2]);
-                setImage(services[2]);
-              }}
-            >
-              <h5>Repair</h5>
-            </button>
+            <ButtonContainer>
+              <button
+                className="allsides-6"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setText(services[ 0 ])
+                  setImage(services[ 0 ])
+                }}
+              >
+                <h5>Custom</h5>
+              </button>
+              <button
+                className="allsides-6"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setText(services[ 1 ])
+                  setImage(services[ 1 ])
+                }}
+              >
+                <h5>Performance</h5>
+              </button>
+              <button
+                className="allsides-6"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setText(services[ 2 ])
+                  setImage(services[ 2 ])
+                }}
+              >
+                <h5>Repair</h5>
+              </button>
+            </ButtonContainer>
+            <ServiceDetails>
+              <img src={image.img} alt="" />
+
+              <div className="text">
+                <p>{text.text}</p>
+              </div>
+              <img src={image.img1} alt="" />
+            </ServiceDetails>
           </Service>
         </Info>
-        <ServiceDetails>
-          <img src={image.img} alt="" />
-          <div className="text">
-            <p>{text.text}</p>
-          </div>
-          <img src={image.img1} alt="" />
-        </ServiceDetails>
+
       </ServiceContainer>
       <Footer />
     </HomeContainer>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 const HomeContainer = styled.div`
   background-color: #000;
-`;
+`
 const ServiceContainer = styled(motion.div)`
   position: relative;
   height: fit-content;
@@ -80,7 +87,17 @@ const ServiceContainer = styled(motion.div)`
   display: grid;
   place-content: center;
   padding-bottom: 2rem;
-`;
+`
+
+const ButtonContainer = styled.div`
+display: flex;
+flex-direction: column;
+height: 100%;
+height: 400px;
+justify-content: space-between;
+margin-right: 1.5rem;
+`
+
 const Info = styled.section`
   width: 100%;
   height: fit-content;
@@ -89,6 +106,7 @@ const Info = styled.section`
   background-color: #000;
   display: flex;
   flex-direction: column;
+
 
   .title {
     padding-bottom: 5rem;
@@ -132,32 +150,23 @@ const Info = styled.section`
     color: gray;
     text-transform: uppercase;
   }
-`;
+`
 
 const Service = styled.div`
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 
   button {
     padding: 15px;
-    background-color: transparent;
-    border: 1px solid #8a8987;
+    border: none;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all linear 0.3s;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #8a8987;
-    width: 150px;
-
-    :hover {
-      h5 {
-        color: #fff;
-      }
-      background: royalblue;
-    }
+    width: 150px;   
   }
 
   @media screen and (max-width: 1000px) {
@@ -174,11 +183,9 @@ const Service = styled.div`
       margin: 1rem 0;
     }
   }
-`;
+`
 
 const ServiceDetails = styled.div`
-  margin: 2rem;
-  padding: 2rem;
   width: fit-content;
   height: fit-content;
   display: flex;
@@ -199,10 +206,10 @@ const ServiceDetails = styled.div`
     display: grid;
     place-content: center;
     padding: 1rem;
-    width: 500px;
+    width: 300px;
     min-height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: #d6d6d6;
     line-height: 2rem;
   }
 
@@ -218,4 +225,4 @@ const ServiceDetails = styled.div`
       text-align: center;
     }
   }
-`;
+`
