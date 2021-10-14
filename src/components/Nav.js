@@ -78,6 +78,34 @@ const Links = styled.div`
     position: relative;
     display: block;
   }
+<<<<<<< HEAD
+=======
+  .hover-2 {
+    padding-bottom: 10px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      transform: scaleX(0);
+      background-color: white;
+      transition: transform 0.3s;
+
+      @media screen and (max-width: 500px) {
+        width: 50%;
+      }
+    }
+
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+>>>>>>> parent of 865f5ba (bug fix)
   @media screen and (max-width: 1000px) {
     flex-direction: row;
     width: 100%;
